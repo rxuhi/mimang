@@ -407,7 +407,7 @@ async function cmd출첵순위(interaction) {
 function buildRoleShopComponents(guildId, description) {
   const roles = db.getShopRoles(guildId);
 
-  const embed = new EmbedBuilder().setColor(MAIN_COLOR).setTitle('🛍️ 역할 상점').setDescription(description);
+  const embed = new EmbedBuilder().setColor(MAIN_COLOR).setTitle('𝐑𝐨𝐥𝐞 𝐒𝐭𝐨𝐫𝐞').setDescription(description);
 
   let select;
   if (roles.length === 0) {
@@ -541,7 +541,7 @@ async function handleRoleShopSelect(interaction) {
   db.addXp(guildId, interaction.user.id, -shopRole.price);
 
   return interaction.reply({
-    content: `🎉 **${shopRole.role_name}** 역할을 구매했습니다! (-${shopRole.price.toLocaleString()} XP)`,
+    content: `**${shopRole.role_name}** 역할을 구매했습니다! (-${shopRole.price.toLocaleString()} XP가 차감되었습니다.)`,
     ephemeral: true,
   });
 }
@@ -611,7 +611,7 @@ async function handleGachaDraw(interaction) {
 
   if (!winner || !winner.role_id) {
     return interaction.reply({
-      content: `💨 꽝! 경험치 **${GACHA_COST_XP.toLocaleString()}**을 사용했지만 아쉽게도 당첨되지 않았습니다.`,
+      content: `가챠 실패! 경험치 **${GACHA_COST_XP.toLocaleString()}**을 사용했지만 아쉽게도 당첨되지 않았습니다.`,
       ephemeral: true,
     });
   }
@@ -634,7 +634,7 @@ async function handleGachaDraw(interaction) {
     });
   }
 
-  return interaction.reply({ content: `🎉 축하합니다! <@&${winner.role_id}> 역할에 당첨되었습니다!`, ephemeral: true });
+  return interaction.reply({ content: `가챠 성공! 축하합니다! <@&${winner.role_id}> 역할에 당첨되었습니다!`, ephemeral: true });
 }
 
 // ---------- /가챠리셋 (관리자) ----------
