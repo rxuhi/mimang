@@ -1,0 +1,17 @@
+{
+  "name": "discord-xp-bot",
+  "version": "1.0.0",
+  "description": "경험치 / 가챠 / 역할상점 / 출석체크 디스코드 봇",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "deploy": "node deploy-commands.js",
+    "start": "node deploy-commands.js && node index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "@napi-rs/canvas": "^1.0.2",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  }
+}
