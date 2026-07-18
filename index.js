@@ -571,9 +571,9 @@ async function cmd가챠(interaction) {
 
   const message = interaction.options.getString('메세지');
 
-  const embed = new EmbedBuilder().setColor(MAIN_COLOR).setTitle('🎰 가챠').setDescription(message);
+  const embed = new EmbedBuilder().setColor(MAIN_COLOR).setTitle('𝐏𝐢𝐜𝐤𝐢𝐧𝐠 𝐫𝐨𝐥𝐞𝐬').setDescription(message);
 
-  const button = new ButtonBuilder().setCustomId('gacha_draw').setLabel('🎰 가챠 뽑기!').setStyle(ButtonStyle.Primary);
+  const button = new ButtonBuilder().setCustomId('gacha_draw').setLabel('𝐏𝐫𝐞𝐬𝐬').setStyle(ButtonStyle.Secondary);
   const row = new ActionRowBuilder().addComponents(button);
 
   const sent = await interaction.reply({ embeds: [embed], components: [row], fetchReply: true });
