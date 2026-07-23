@@ -1,5 +1,7 @@
 require('dotenv').config();
 const { REST, Routes, SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const introCommand = require('./intro');
+
 
 const commands = [
   new SlashCommandBuilder()
@@ -113,6 +115,7 @@ const commands = [
     .addUserOption((opt) => opt.setName('대상').setDescription('확인할 사용자').setRequired(false)),
 
   new SlashCommandBuilder().setName('채팅순위').setDescription('서버 채팅 횟수 순위를 확인합니다.'),
+    introCommand.data,
 ].map((c) => c.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
