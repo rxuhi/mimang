@@ -1,4 +1,6 @@
 require('dotenv').config();
+const introCommand = require('./intro');
+
 const {
   Client,
   GatewayIntentBits,
@@ -173,6 +175,8 @@ async function handleCommand(interaction) {
       return cmd채팅(interaction);
     case '채팅순위':
       return cmd채팅순위(interaction);
+    case '자기소개':
+      return introCommand.execute(interaction);
     default:
       return interaction.reply({ content: '알 수 없는 명령어입니다.', ephemeral: true });
   }
