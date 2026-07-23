@@ -13,7 +13,7 @@ const ADULT_AGE = 19; // 이 나이(만 나이, 출생연도 기준 간이계산
 const MAIN_COLOR = 0xa7b7d6;
 
 // 닉네임 자동 변경 형식: ⟡「月影」 이름 ⸝⸝
-const NICKNAME_PREFIX = '⟡「月影」 ';
+const NICKNAME_PREFIX = '⟡ 「月影」 ';
 const NICKNAME_SUFFIX = ' ⸝⸝';
 
 // deploy-commands.js에 등록할 슬래시커맨드 정의
